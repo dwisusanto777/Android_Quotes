@@ -13,6 +13,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 
 /**
  * Created by Alejandro on 06/06/14.
@@ -22,7 +24,7 @@ import android.widget.ImageView;
  * A Google Plus like, circular button for Android.
  * See https://github.com/Alexrs95/CircularButton
  */
-public class SquareButton extends ImageView {
+public class SquareButton extends AppCompatImageView {
 
     /**
      * The dimension of the shadow is a 15% of the radius of the button
@@ -69,10 +71,10 @@ public class SquareButton extends ImageView {
         mButtonPaint.setStyle(Paint.Style.FILL);
 
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SquareButton);
-            buttonColor = a.getColor(R.styleable.SquareButton_buttonColor, buttonColor);
-            shadowColor = a.getColor(R.styleable.SquareButton_shadowColor, shadowColor);
-            a.recycle();
+//            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SquareButton);
+//            buttonColor = a.getColor(R.styleable.SquareButton_buttonColor, buttonColor);
+//            shadowColor = a.getColor(R.styleable.SquareButton_shadowColor, shadowColor);
+//            a.recycle();
         }
         setButtonColor(buttonColor);
     }
