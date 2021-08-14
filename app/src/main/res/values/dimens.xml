@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="square">300dp</dimen>
+    <dimen name="arrowStrokeWidth">300dp</dimen>
+    <dimen name="height_btnCircle">80dp</dimen>
+    <dimen name="width_btnCircle">80dp</dimen>
+
+    <integer-array name="time_frame_1">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_2">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_3">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_4">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_5">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_6">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+    <integer-array name="time_frame_7">
+        <item>0</item>
+        <item>400</item>
+        <item>300</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </integer-array>
+</resources>

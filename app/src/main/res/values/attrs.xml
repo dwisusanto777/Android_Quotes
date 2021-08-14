@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleButtonNew">
+        <attr name="cb_color" format="color"/>
+        <attr name="cb_pressedRingWidth" format="dimension"/>
+        <attr name="arrowAlign" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SquareButton">
+        <attr name="shadowColor" format="color"/>
+        <attr name="buttonColor" format="color"/>
+    </declare-styleable>
+</resources>

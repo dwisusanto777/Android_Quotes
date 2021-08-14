@@ -1,6 +1,7 @@
 package com.example.course2kitaquotes.custom;
 
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -10,8 +11,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import com.arkay.quoteapp.R;
-import com.nineoldandroids.animation.ObjectAnimator;
+import com.example.course2kitaquotes.R;
+
 
 public class CircleButtonNew extends ImageView
 {
@@ -138,18 +139,18 @@ public class CircleButtonNew extends ImageView
 		focusPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		focusPaint.setStyle(Paint.Style.STROKE);
 
-			TypedArray arrayAttr=getContext().obtainStyledAttributes(attrs, R.styleable.CircleButton,defStyle,0);
+			TypedArray arrayAttr=getContext().obtainStyledAttributes(attrs, R.styleable.CircleButtonNew,defStyle,0);
 
-		arrowAlignmentValue=arrayAttr.getInteger(R.styleable.CircleButton_arrowAlign,0);
+		arrowAlignmentValue=arrayAttr.getInteger(R.styleable.CircleButtonNew_arrowAlign,0);
 
 		pressedRingWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEFAULT_PRESSED_RING_WIDTH_DIP, getResources()
 				.getDisplayMetrics());
 
 		int color = Color.BLACK;
 		if (attrs != null) {
-			final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CircleButton);
-			color = a.getColor(R.styleable.CircleButton_cb_color, color);
-			pressedRingWidth = (int) a.getDimension(R.styleable.CircleButton_cb_pressedRingWidth, pressedRingWidth);
+			final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CircleButtonNew);
+			color = a.getColor(R.styleable.CircleButtonNew_cb_color, color);
+			pressedRingWidth = (int) a.getDimension(R.styleable.CircleButtonNew_cb_pressedRingWidth, pressedRingWidth);
 			a.recycle();
 		}
 

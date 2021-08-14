@@ -13,7 +13,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.appcompat.widget.AppCompatImageView;
+
+import com.example.course2kitaquotes.R;
 
 
 /**
@@ -24,7 +25,7 @@ import androidx.appcompat.widget.AppCompatImageView;
  * A Google Plus like, circular button for Android.
  * See https://github.com/Alexrs95/CircularButton
  */
-public class SquareButton extends AppCompatImageView {
+public class SquareButton extends ImageView {
 
     /**
      * The dimension of the shadow is a 15% of the radius of the button
@@ -36,10 +37,8 @@ public class SquareButton extends AppCompatImageView {
     private float centerY;
     private float left=0;
     private float top=0;
-//    private float right = left+getResources().getDimension(R.dimen.square);
-//    private float bottom = top + getResources().getDimension(R.dimen.square);
-    private float right = left+300;
-    private float bottom = top +300;
+    private float right = left+getResources().getDimension(R.dimen.square);
+    private float bottom = top +getResources().getDimension(R.dimen.square);
 
     private int buttonColor = Color.WHITE;
     private int shadowColor = Color.GRAY;
