@@ -6,6 +6,12 @@ public class CategoryModel {
     private String categoryName;
     private String categoryImage;
 
+    public CategoryModel(int categoryId, String categoryName, String categoryImage) {
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
+        this.categoryImage = categoryImage;
+    }
+
     public int getCategoryId() {
         return categoryId;
     }

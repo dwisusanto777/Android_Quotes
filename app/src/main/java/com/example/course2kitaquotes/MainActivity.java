@@ -21,6 +21,9 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.example.course2kitaquotes.custom.SquareButton;
 import com.example.course2kitaquotes.databinding.MainActivityBinding;
+import com.example.course2kitaquotes.fragment.FragmentAboutApp;
+import com.example.course2kitaquotes.fragment.FragmentCategoryRefresh;
+import com.example.course2kitaquotes.fragment.FragmentQuotesShow;
 
 public class MainActivity extends FragmentActivity implements Animation.AnimationListener, View.OnClickListener {
 
@@ -36,15 +39,15 @@ public class MainActivity extends FragmentActivity implements Animation.Animatio
     final Handler handler4 = new Handler();
     final Handler handler5 = new Handler();
     final Handler handler6 = new Handler();
-    int buttonIndex1 = 1;
-    int buttonIndex2 = 2;
-    int buttonIndex3 = 3;
-    int buttonIndex4 = 4;
-    int buttonIndex5 = 5;
-    int buttonIndex6 = 6;
-    final String isBookMark = "isBookMark";
-    final String categoryId = "category_id";
-    final String pref_name = "preferences";
+    final int buttonIndex1 = 1;
+    final int buttonIndex2 = 2;
+    final int buttonIndex3 = 3;
+    final int buttonIndex4 = 4;
+    final int buttonIndex5 = 5;
+    final int buttonIndex6 = 6;
+    public static final String isBookMark = "isBookMark";
+    public static final String categoryId = "category_id";
+    public static final String pref_name = "preferences";
     Bundle bundle = new Bundle();
     int[] time_frame;
 
@@ -185,20 +188,22 @@ public class MainActivity extends FragmentActivity implements Animation.Animatio
     public void onAnimationEnd(Animation animation) {
         switch (buttonIndex){
             case buttonIndex1:
+                //All Quotes
                 if(animation == animationZoomInOut){
                     bundle.putInt(ParameterRegister.SELECT_INDEX, buttonIndex1);
                     Log.d("On Animed  END", button1+" All Quotes");
-                    fragment = FramgmentSssQuotesRendering;
+                    fragment = FragmentQuotesShow.newInstance(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.linearLayout, fragment)
                             .addToBackStack("tag")
                             .commit();
                 }
                 break;
             case buttonIndex2:
+                // Category
                 if(animation == animationZoomInOut){
                     bundle.putInt(ParameterRegister.SELECT_INDEX, buttonIndex2);
                     Log.d("On Animed  END", button2+" All Category");
-                    fragment = FramgmentSssQuotesRendering;
+                    fragment = FragmentCategoryRefresh.newInstance(bundle);
                     FragmentManager fm = getSupportFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.linearLayout, fragment);
@@ -207,10 +212,11 @@ public class MainActivity extends FragmentActivity implements Animation.Animatio
                 }
                 break;
             case buttonIndex3:
+                //Author
                 if(animation == animationZoomInOut){
                     bundle.putInt(ParameterRegister.SELECT_INDEX, buttonIndex3);
                     Log.d("On Animed  END", button3+" All Author");
-                    fragment = FramgmentSssQuotesRendering;
+                    fragment = FragmentCategoryRefresh.newInstance(bundle);
                     FragmentManager fm = getSupportFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.linearLayout, fragment);
@@ -222,7 +228,7 @@ public class MainActivity extends FragmentActivity implements Animation.Animatio
                 if(animation == animationZoomInOut){
                     Bundle b = new Bundle();
                     b.putBoolean(isBookMark, true);
-                    fragment = FramgmentSssQuotesRendering;
+                    fragment = FragmentQuotesShow.newInstance(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.linearLayout, fragment)
                             .addToBackStack("tag")
                             .commit();
@@ -231,7 +237,7 @@ public class MainActivity extends FragmentActivity implements Animation.Animatio
             case buttonIndex5:
                 if(animation == animationZoomInOut){
                     Bundle b = new Bundle();
-                    fragment = FragmentAboutApp;
+                    fragment = FragmentAboutApp.newInstance(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.linearLayout, fragment)
                             .addToBackStack("tag")
                             .commit();
