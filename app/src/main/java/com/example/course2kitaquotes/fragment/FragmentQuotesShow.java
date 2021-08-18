@@ -567,7 +567,7 @@ public class FragmentQuotesShow extends Fragment implements View.OnClickListener
         buttonBacklist = view.findViewById(R.id.btn_jump);
         buttonShare = view.findViewById(R.id.btn_share);
         buttonBookmark = view.findViewById(R.id.btn_bookmark);
-        relativeLayout= view.findViewById(R.id.rl);
+        relativeLayout= view.findViewById(R.id.relativeLayout2);
         context = getActivity().getApplicationContext();
         sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
         setting = getActivity().getSharedPreferences(MainActivity.pref_name, 0);

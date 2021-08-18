@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:id="@+id/linearLayout">
+    android:id="@+id/linearLayoutFragmentList">
 
     <com.example.course2kitaquotes.custom.DashboardLayout
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                 android:layout_width="@dimen/width_btnCircle"
                 android:layout_height="@dimen/height_btnCircle"/>
             <TextView
-                android:text="All Quotes"
+                android:text="All Category"
                 android:textColor="@color/black"
                 android:gravity="bottom"
                 android:layout_below="@+id/btn2"
@@ -64,7 +64,7 @@
                 android:layout_width="@dimen/width_btnCircle"
                 android:layout_height="@dimen/height_btnCircle"/>
             <TextView
-                android:text="All Quotes"
+                android:text="All Author"
                 android:textColor="@color/black"
                 android:gravity="bottom"
                 android:layout_below="@+id/btn3"
@@ -85,7 +85,7 @@
                 android:layout_width="@dimen/width_btnCircle"
                 android:layout_height="@dimen/height_btnCircle"/>
             <TextView
-                android:text="All Quotes"
+                android:text="Favorites"
                 android:textColor="@color/black"
                 android:gravity="bottom"
                 android:layout_below="@+id/btn4"
@@ -106,7 +106,7 @@
                 android:layout_width="@dimen/width_btnCircle"
                 android:layout_height="@dimen/height_btnCircle"/>
             <TextView
-                android:text="All Quotes"
+                android:text="More"
                 android:textColor="@color/black"
                 android:gravity="bottom"
                 android:layout_below="@+id/btn5"
@@ -127,7 +127,7 @@
                 android:layout_width="@dimen/width_btnCircle"
                 android:layout_height="@dimen/height_btnCircle"/>
             <TextView
-                android:text="All Quotes"
+                android:text="Share"
                 android:textColor="@color/black"
                 android:gravity="bottom"
                 android:layout_below="@+id/btn6"
@@ -139,4 +139,4 @@
         
     </com.example.course2kitaquotes.custom.DashboardLayout>
 
-</LinearLayout>
+</FrameLayout>
